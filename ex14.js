@@ -3,6 +3,20 @@
 // Example: const cart = createCart(); cart.addItem("apple"); cart.getItems(); // ["apple"]
 
 const cart = createCart();
+
+function createCart() {
+    let myCart = []
+
+    return {
+        addItem: (word) => {
+            return myCart.push(word)
+        },
+        getItems: () => {
+            return myCart
+
+        }
+    }
+}
 cart.addItem("apple");
 cart.addItem("banana");
 console.log(cart.getItems()); // Expected output: ["apple", "banana"]

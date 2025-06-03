@@ -5,3 +5,15 @@
 
 console.log(validateEmail("test@example.com")); // Expected output: true
 console.log(validateEmail("invalid-email.com")); // Expected output: false
+
+function validateEmail(str) {
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === "@") {
+            let chars = str.substring(i, str.length)
+            if (chars.includes(".")) {
+                return true
+            }
+        }
+    }
+    return false
+}
